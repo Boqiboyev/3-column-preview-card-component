@@ -112,7 +112,6 @@ a:hover {
 @media (min-width: 70rem){
   body {
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
