@@ -119,14 +119,15 @@ body {
   color: var(--transparent-white);
 }
 
-@media (min-width: 90rem){
+@media (min-width: 70rem){
   body {
-    width: 100vw;
+    /* width: 100vw; */
+    overflow: hidden;
   }
   .container {
     grid-template-columns: 290px 290px 290px;
     place-content: center;
-    margin-top: 170px;
+    margin-top: 80px;
     grid-template-areas: 
     'card1 card2 card3';
   }
