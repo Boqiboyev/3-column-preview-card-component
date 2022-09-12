@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+  /* Primary orange */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  width: 100%;
+}
+
+.container {
+  width: 280px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-areas: 
+    'card1'
+    'card2'
+    'card3';
+  }
+
+.card1 {
+  grid-area: card1;
+  background-color: var(--bright-orange);
+  border-radius: 7px 7px 0 0;
+}
+
+.card2 {
+  grid-area: card2;
+  background-color: var(--dark-cyan);
+}
+
+.card3 {
+  grid-area: card3;
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 7px 7px;
+}
+
+.container img {
+  margin: 35px 40px 25px;
+}
+
+.container h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  margin: 0px 40px 20px;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+
+.container p {
+  width: 180px;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  margin: 0px 40px 30px;
+  color: var(--transparent-white);
+  font-weight: 400;
+  /* letter-spacing: .5px; */
+}
+
+.text1 {
+  width: 195px !important;
+  padding: 0;
+}
+
+.container button {
+  margin: 0px 40px 35px;
+  padding: 14px 0;
+  width: 150px;
+  border-radius: 35px;
+  border: none;
+  background-color: var(--very-light-gray);
+  font-size: .9rem;
+  letter-spacing: .5px;
+  font-weight: 700;
+  color:var(--bright-orange);
+  cursor: pointer;
+  transition: background-color 0.30s ease, border 0.30s ease;
+}
+
+.container .card1 button {
+  color: var(--bright-orange);
+}
+.container .card2 button {
+  color: var(--dark-cyan);
+}
+.container .card3 button {
+  color: var(--very-dark-cyan);
+}
+
+.container .card1 button:hover {
+  background-color: transparent;
+  outline: 3px solid var(--transparent-white);
+  color: var(--transparent-white);
+}
+.container .card2 button:hover {
+  background-color: transparent;
+  outline: 3px solid var(--transparent-white);
+  color: var(--transparent-white);
+}
+.container .card3 button:hover {
+  background-color: transparent;
+  outline: 3px solid var(--transparent-white);
+  color: var(--transparent-white);
+}
+
+@media (min-width: 90rem){
+  body {
+    width: 100vw;
+  }
+  .container {
+    grid-template-columns: 290px 290px 290px;
+    place-content: center;
+    margin-top: 170px;
+    grid-template-areas: 
+    'card1 card2 card3';
+  }
+
+  .container img {
+    margin: 35px 40px 30px;
+  }
+  
+  .container h1 {
+    font-size: 37px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .container p {
+    width: 210px;
+    margin-inline: 40px;
+    margin-bottom: 80px;
+    line-height: 1.8;
+  }
+  
+  .container button {
+    margin: 0px 40px 45px;
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  .card1 {
+    border-radius: 7px 0 0 7px;
+  }
+  .card2 {
+    border-radius: none;
+  }
+  .card3 {
+    border-radius: 0 7px 7px 0;
+  }
+  
+}
