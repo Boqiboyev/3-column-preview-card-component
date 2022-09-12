@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-/* font-family: 'Big Shoulders Display', cursive;
-  font-family: 'Lexend Deca', sans-serif; */
 
 :root {
   /* Primary orange */
@@ -24,96 +22,88 @@ body {
   width: 100%;
 }
 
-.container {
+article {
   width: 280px;
   margin: 100px auto;
   display: grid;
   grid-template-areas: 
-    'card1'
-    'card2'
-    'card3';
+    'sedan'
+    'suv'
+    'luxury';
   }
 
-.card1 {
-  grid-area: card1;
+.card {
+    min-height: 395px;
+}
+
+.sedan {
+  grid-area: sedan;
   background-color: var(--bright-orange);
   border-radius: 7px 7px 0 0;
 }
 
-.card2 {
-  grid-area: card2;
+.suv {
+  grid-area: suv;
   background-color: var(--dark-cyan);
 }
 
-.card3 {
-  grid-area: card3;
+.luxury {
+  grid-area: luxury;
   background-color: var(--very-dark-cyan);
   border-radius: 0 0 7px 7px;
 }
 
-.container img {
-  margin: 35px 40px 25px;
+img, h2, p, a {
+  margin-left: 40px;
+  margin-bottom: 20px;
 }
 
-.container h1 {
+article img {
+  margin-top: 30px;
+}
+
+article h2 {
   font-family: 'Big Shoulders Display', cursive;
-  margin: 0px 40px 20px;
   text-transform: uppercase;
   color: var(--very-light-gray);
 }
 
 
-.container p {
+article p {
   width: 180px;
   font-size: 15px;
   font-family: 'Lexend Deca', sans-serif;
-  margin: 0px 40px 30px;
   color: var(--transparent-white);
   font-weight: 400;
-  /* letter-spacing: .5px; */
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
-.text1 {
-  width: 195px !important;
-  padding: 0;
-}
-
-.container button {
-  margin: 0px 40px 35px;
-  padding: 14px 0;
-  width: 150px;
+article a {
+  padding: 13px 20px;
   border-radius: 35px;
+  text-decoration: none;
   border: none;
   background-color: var(--very-light-gray);
-  font-size: .9rem;
   letter-spacing: .5px;
+  font-family: 'Lexend Deca', sans-serif;
   font-weight: 700;
   color:var(--bright-orange);
   cursor: pointer;
   transition: background-color 0.30s ease, border 0.30s ease;
 }
 
-.container .card1 button {
+.sedan a {
   color: var(--bright-orange);
 }
-.container .card2 button {
+.suv a {
   color: var(--dark-cyan);
 }
-.container .card3 button {
+.luxury a {
   color: var(--very-dark-cyan);
 }
 
-.container .card1 button:hover {
-  background-color: transparent;
-  outline: 3px solid var(--transparent-white);
-  color: var(--transparent-white);
-}
-.container .card2 button:hover {
-  background-color: transparent;
-  outline: 3px solid var(--transparent-white);
-  color: var(--transparent-white);
-}
-.container .card3 button:hover {
+a:hover {
   background-color: transparent;
   outline: 3px solid var(--transparent-white);
   color: var(--transparent-white);
@@ -121,47 +111,53 @@ body {
 
 @media (min-width: 70rem){
   body {
-    /* width: 100vw; */
+    min-height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .container {
+  article {
     grid-template-columns: 290px 290px 290px;
     place-content: center;
     margin-top: 80px;
     grid-template-areas: 
-    'card1 card2 card3';
+    'sedan suv luxury';
   }
 
-  .container img {
+  .card {
+    min-height: 470px;
+  }
+
+  article img {
     margin: 35px 40px 30px;
   }
   
-  .container h1 {
+  article h2 {
     font-size: 37px;
     margin-bottom: 30px;
   }
   
   
-  .container p {
+  article p {
     width: 210px;
     margin-inline: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     line-height: 1.8;
   }
   
-  .container button {
-    margin: 0px 40px 45px;
-    padding: 15px 0;
-    font-size: 15px;
+  article a {
+    padding: 15px 30px;
   }
 
-  .card1 {
+  .sedan {
     border-radius: 7px 0 0 7px;
   }
-  .card2 {
-    border-radius: none;
+  .suv {
+    border-radius: 0;
   }
-  .card3 {
+  .luxury {
     border-radius: 0 7px 7px 0;
   }
   
